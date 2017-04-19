@@ -5,30 +5,27 @@
  import java.util.*;
  import java.io.*;
  
- class ensureCapacity
+ class code
  {
  	public static void main (String[] args)
  	{
- 		StringBuilder sb = new StringBuilder();
+ 		String str = "Hello world ! this world is beautiful.";
  		
- 		System.out.println("Defualt Capacity: " + sb.capacity());
+ 		StringTokenizer st = new StringTokenizer(str , " ");
  		
- 		String str = "hello";
+ 		while(st.hasMoreTokens())
+ 		{
+ 			System.out.print("<" + st.nextToken() + ">");
+ 		}
  		
- 		//sb.append(str);
+ 		System.out.printf("\n");
  		
- 		sb.ensureCapacity(str.length());
+ 		//st = new StringTokenizer(str , " " , false);
+ 		st = new StringTokenizer(str , "." , true);
  		
- 		System.out.println("After adding " + " \" " + str + " \" " + " capacity: " + sb.capacity());
- 		
- 		String str2 = "world !";
- 		
- 		sb.ensureCapacity(str2.length());
- 		System.out.println("After adding " + " \" " + str2 + "\"" + " capacity: " + sb.capacity());
- 		
- 		String str3 = "this world is so beautiful.";
- 		
- 		sb.ensureCapacity(str3.length());
- 		System.out.println("After adding " + " \" " + str3 + "\"" + " capacity: " + sb.capacity());
+ 		while(st.hasMoreTokens())
+ 		{
+ 			System.out.print("<" + st.nextToken()+ ">" );
+ 		}
  	}
  }
