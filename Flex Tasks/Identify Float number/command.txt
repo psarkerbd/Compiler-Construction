@@ -1,0 +1,3 @@
+flex -ofnum.c fnum.l
+gcc fnum.c -o fnum.exe
+fnum.exe
